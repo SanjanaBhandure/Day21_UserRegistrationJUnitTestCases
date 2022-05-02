@@ -34,9 +34,9 @@ public class UserRegister {
 
 
     /*
-     * isValidPassword method created that should have at least 1 Upper Case.
+     * isValidPassword method created that should have at least 1 numeric number in the password
      */
     public static boolean isValidPassword(String password) {
-        return Pattern.matches("^[A-Z]{1}[A-Za-z 0-9]{8,}$", password);
+        return Pattern.matches("^(?=.*[0-9])\\\"+\\\"(?=.*[a-z])\\\"+\\\"(?=.*[A-Z])\\\"+\\\"(?=.*[@#$%^&+=]){8,}$", password);
     }
 }
