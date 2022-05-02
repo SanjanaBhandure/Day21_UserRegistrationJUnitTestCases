@@ -1,12 +1,13 @@
 /*
  * The User Registration System program implements an application that needs
  * to ensure all validations are in place during the User Entry with validate Test Cases.
- * UC9: Should clear all email samples provided separately.
+ * UC11: Write JUnit Parameterised Test to validate multiple entry for the Email Address.
  *
  * @author: Sanjana Bhandure
- * @version: 1.8
+ * @version: 1.10
  * @date: 2-05-2022
  */
+
 package com.Bridgelabz.Day21_UserRegistrationProblem;
 
 import java.util.Scanner;
