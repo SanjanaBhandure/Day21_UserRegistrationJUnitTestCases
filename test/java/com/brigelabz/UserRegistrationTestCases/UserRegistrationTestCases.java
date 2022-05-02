@@ -1,5 +1,6 @@
 package com.brigelabz.UserRegistrationTestCases;
 
+import com.Bridgelabz.Day21_UserRegistrationProblem.MoodAnalyser;
 import com.Bridgelabz.Day21_UserRegistrationProblem.UserRegister;
 import org.junit.Assert;
 import org.junit.Test;
@@ -172,5 +173,17 @@ public class UserRegistrationTestCases {
     public void givenEmail9_WhenNotProper_ShouldReturnFalse() {
         boolean result = userRegister.isValidEmail("abc..2002@gmail.com");
         Assert.assertFalse("abc..2002@gmail.com",false);
+    }
+
+    @Test
+    public void givenMessage_WhenHappy_ShouldReturnEntrySuccessful() {
+        String result = MoodAnalyser.analyseMood("User is Happy");
+        Assert.assertEquals("Entry Successful", result);
+    }
+
+    @Test
+    public void givenMessage_WhenNotProper_ShouldReturnEntryFailed() {
+        String result = MoodAnalyser.analyseMood("User is Sad");
+        Assert.assertEquals("Entry Failed", result);
     }
 }
