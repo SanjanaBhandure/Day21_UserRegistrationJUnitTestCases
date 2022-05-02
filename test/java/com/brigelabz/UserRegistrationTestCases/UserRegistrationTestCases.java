@@ -83,4 +83,94 @@ public class UserRegistrationTestCases {
         boolean valid = userRegister.isValidPassword("abA123#");
         Assert.assertFalse("abA1@",false);
     }
+
+    @Test
+    public void  givenPasswordAsPerRule2_ShouldHaveAtleast1UpperCase_WhenValid_ShouldReturnTrue(){
+        boolean valid = userRegister.isValidPassword("ASasc123@");
+        Assert.assertEquals(true,valid);
+    }
+
+    @Test
+    public void  givenPasswordAsPerRule2_ShouldHaveAtleast1UpperCase_WhenInvalid_ShouldReturnTrue(){
+        boolean valid = userRegister.isValidPassword("abc1234@df1");
+        Assert.assertEquals(false,valid);
+    }
+
+    @Test
+    public void  givenPasswordAsPerRule3_ShouldHaveAtleast1NumericNumber_WhenValid_ShouldReturnTrue(){
+        boolean valid = userRegister.isValidPassword("ABCabc123@");
+        Assert.assertEquals(true,valid);
+    }
+
+    @Test
+    public void  givenPasswordAsPerRule3_ShouldHaveAtleast1NumericNumber_WhenInvalid_ShouldReturnTrue(){
+        boolean valid = userRegister.isValidPassword("abcAFG$%");
+        Assert.assertEquals(false,valid);
+    }
+
+    @Test
+    public void  givenPasswordAsPerRule4_ShouldHaveExactlyOneSpecialCharacter_WhenValid_ShouldReturnTrue(){
+        boolean valid = userRegister.isValidPassword("ABCabcB123#");
+        Assert.assertEquals(true,valid);
+    }
+
+    @Test
+    public void  givenPasswordAsPerRule4_ShouldHaveExactlyOneSpecialCharacter_WhenInvalid_ShouldReturnTrue(){
+        boolean valid = userRegister.isValidPassword("abcAOP123");
+        Assert.assertEquals(false,valid);
+    }
+
+    @Test
+    public void givenEmail1_WhenProper_ShouldReturnTrue() {
+        boolean result = userRegister.isValidEmail("abc.100@abc.com.au");
+        Assert.assertEquals(true, result);
+    }
+
+    @Test
+    public void givenEmail1_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc()*@gmail.com");
+        Assert.assertFalse("abc()*@gmail.com",false);
+    }
+
+    @Test
+    public void givenEmail2_WhenProper_ShouldReturnTrue() {
+        boolean result = userRegister.isValidEmail("abc.100@abc.com.au");
+        Assert.assertFalse("abc.100@abc.com.au",false);
+    }
+
+    @Test
+    public void givenEmail3_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc()*@gmail.com");
+        Assert.assertFalse("abc()*@gmail.com",false);
+    }
+    @Test
+    public void givenEmail4_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc123@gmail.a –");
+        Assert.assertFalse("abc123@gmail.a –",false);
+    }
+    @Test
+    public void givenEmail5_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc123@.com");
+        Assert.assertFalse("abc123@.com",false);
+    }
+    @Test
+    public void givenEmail6_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail(".abc@abc.com");
+        Assert.assertFalse(".abc@abc.com",false);
+    }
+    @Test
+    public void givenEmail7_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc.@gmail.com –");
+        Assert.assertFalse("abc.@gmail.com –",false);
+    }
+    @Test
+    public void givenEmail8_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc@abc@gmail.com");
+        Assert.assertFalse("abc@abc@gmail.com",false);
+    }
+    @Test
+    public void givenEmail9_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegister.isValidEmail("abc..2002@gmail.com");
+        Assert.assertFalse("abc..2002@gmail.com",false);
+    }
 }

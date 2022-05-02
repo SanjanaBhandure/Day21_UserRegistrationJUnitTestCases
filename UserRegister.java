@@ -1,5 +1,6 @@
 package com.Bridgelabz.Day21_UserRegistrationProblem;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegister {
@@ -38,5 +39,12 @@ public class UserRegister {
      */
     public static boolean isValidPassword(String password) {
         return Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$" , password);
+    }
+
+    /*
+     * emailIdValidator method is created to validate all the provided samples.
+     */
+    public static boolean emailIdValidator(String emailId) {
+        return Pattern.matches("^[a-z0-9]{3,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z]{2,3}){0,1}$", emailId);
     }
 }

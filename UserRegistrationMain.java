@@ -1,11 +1,10 @@
 /*
  * The User Registration System program implements an application that needs
  * to ensure all validations are in place during the User Entry with validate Test Cases.
- * UC5: As a User need to follow pre-defined Password rules.
- * Rule4 – Has exactly Special Character.
+ * UC9: Should clear all email samples provided separately.
  *
  * @author: Sanjana Bhandure
- * @version: 1.7
+ * @version: 1.8
  * @date: 2-05-2022
  */
 package com.Bridgelabz.Day21_UserRegistrationProblem;
@@ -26,7 +25,7 @@ public class UserRegistrationMain {
 
         System.out.println("Enter Email: ");
         String email = scanner.nextLine();
-        System.out.println(UserRegister.isValidEmail(email));
+        System.out.println(UserRegister.emailIdValidator(email));
 
         System.out.println("Enter phone Number with country code(space between country code and phone Number): ");
         String phoneNumber = scanner.nextLine();
