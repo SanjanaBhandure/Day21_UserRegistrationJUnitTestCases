@@ -1,10 +1,10 @@
 /*
  * The User Registration System program implements an application that needs
  * to ensure all validations are in place during the User Entry with validate Test Cases.
- * UC2: As a User need to enter a valid Last Name.
+ * UC3: As a User need to enter a valid email.
  *
  * @author: Sanjana Bhandure
- * @version: 1.1
+ * @version: 1.2
  * @date: 2-05-2022
  */
 package com.Bridgelabz.Day21_UserRegistrationProblem;
@@ -22,6 +22,10 @@ public class UserRegistrationMain {
         System.out.println("Enter Last Name: ");
         String lastName = scanner.nextLine();
         System.out.println(UserRegister.isValidLastName(lastName));
+
+        System.out.println("Enter Email: ");
+        String email = scanner.nextLine();
+        System.out.println(UserRegister.isValidEmail(email));
     }
 }
 

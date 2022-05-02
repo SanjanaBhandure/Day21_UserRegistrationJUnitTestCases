@@ -16,4 +16,11 @@ public class UserRegister {
     public static boolean isValidLastName(String lastName) {
         return Pattern.matches("^[A-Z]{1}[a-z]{2,}$", lastName);
     }
+
+    /*
+     * isValidEmail method created to validate the email
+     */
+    public static boolean isValidEmail(String email) {
+        return Pattern.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", email);
+    }
 }

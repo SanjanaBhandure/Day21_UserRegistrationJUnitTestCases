@@ -38,4 +38,19 @@ public class UserRegistrationTestCases {
         boolean valid = userRegister.isValidLastName("bhandure");
         Assert.assertEquals(false,valid);
     }
+
+    /*
+     * givenEmailShouldBeValidTestCase created to validate email.
+     */
+    @Test
+    public void givenEmailShouldBeValidTestCase(){
+        boolean valid = userRegister.isValidEmail("abc@gmail.com");
+        Assert.assertEquals(true,valid);
+    }
+
+    @Test
+    public void givenEmailShouldBeInValidTestCase(){
+        boolean valid = userRegister.isValidEmail("ab_c@");
+        Assert.assertEquals(false,valid);
+    }
 }
