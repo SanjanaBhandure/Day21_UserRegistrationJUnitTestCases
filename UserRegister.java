@@ -31,4 +31,12 @@ public class UserRegister {
     public static boolean isValidPhoneNumber(String phoneNumber) {
         return Pattern.matches("^[1-9]{2}\\s{1}[1-9]{1}[0-9]{9}$", phoneNumber);
     }
+
+
+    /*
+     * isValidPassword method created that should have minimum 8 characters.
+     */
+    public static boolean isValidPassword(String password) {
+        return Pattern.matches("^[A-Z a-z 0-9]{8,}$", password);
+    }
 }

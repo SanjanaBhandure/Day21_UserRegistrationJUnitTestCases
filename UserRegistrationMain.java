@@ -1,11 +1,11 @@
 /*
  * The User Registration System program implements an application that needs
  * to ensure all validations are in place during the User Entry with validate Test Cases.
- * UC4: As a User need to follow pre-defined.
- * Mobile Format - E.g. 91 9919819801 - Country code follow by space.
+ * UC5: As a User need to follow pre-defined Password rules.
+ * Rule 1 – minimum 8
  *
  * @author: Sanjana Bhandure
- * @version: 1.3
+ * @version: 1.4
  * @date: 2-05-2022
  */
 package com.Bridgelabz.Day21_UserRegistrationProblem;
@@ -31,6 +31,10 @@ public class UserRegistrationMain {
         System.out.println("Enter phone Number with country code(space between country code and phone Number): ");
         String phoneNumber = scanner.nextLine();
         System.out.println(UserRegister.isValidPhoneNumber(phoneNumber));
+
+        System.out.println("Enter Password: ");
+        String password = scanner.nextLine();
+        System.out.println(UserRegister.isValidPassword(password));
     }
 }
 
