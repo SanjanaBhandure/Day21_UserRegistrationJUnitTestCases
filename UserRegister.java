@@ -23,4 +23,12 @@ public class UserRegister {
     public static boolean isValidEmail(String email) {
         return Pattern.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", email);
     }
+
+    /*
+     * isValidPhoneNumber method created
+     * E.g. 91 9919819801 - Country code follow by space and 10 digit number
+     */
+    public static boolean isValidPhoneNumber(String phoneNumber) {
+        return Pattern.matches("^[1-9]{2}\\s{1}[1-9]{1}[0-9]{9}$", phoneNumber);
+    }
 }

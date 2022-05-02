@@ -53,4 +53,19 @@ public class UserRegistrationTestCases {
         boolean valid = userRegister.isValidEmail("ab_c@");
         Assert.assertEquals(false,valid);
     }
+
+    /*
+     * givenEmailShouldBeValidTestCase created to validate email.
+     */
+    @Test
+    public void givenMobileNumberShouldBeValidTestCase(){
+        boolean valid = userRegister.isValidPhoneNumber("91 9123456789");
+        Assert.assertEquals(true,valid);
+    }
+
+    @Test
+    public void givenMobileNumberShouldBeInValidTestCase(){
+        boolean valid = userRegister.isValidPhoneNumber("919123456789");
+        Assert.assertEquals(false,valid);
+    }
 }
