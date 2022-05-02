@@ -23,4 +23,19 @@ public class UserRegistrationTestCases {
         boolean valid = userRegister.isValidFirstName("sanjana");
         Assert.assertEquals(false,valid);
     }
+
+    /*
+     * givenLastNameShouldBeValidTestCase created to validate last name is true or false.
+     */
+    @Test
+    public void givenLastNameShouldBeValidTestCase(){
+        boolean valid = userRegister.isValidLastName("Bhandure");
+        Assert.assertEquals(true,valid);
+    }
+
+    @Test
+    public void givenLastNameShouldBeInValidTestCase(){
+        boolean valid = userRegister.isValidLastName("bhandure");
+        Assert.assertEquals(false,valid);
+    }
 }
