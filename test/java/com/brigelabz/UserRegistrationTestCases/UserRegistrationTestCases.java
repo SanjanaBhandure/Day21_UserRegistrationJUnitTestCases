@@ -55,11 +55,7 @@ public class UserRegistrationTestCases {
     }
 
     /*
-<<<<<<< HEAD
-     * givenMobileNumberShouldBeValidTestCase created to validate email.
-=======
-     * givenPhoneNumberShouldBeValidTestCase created to validate email.
->>>>>>> 5f0f9c77b3cae49c42fd7fc7d19fb4810bfd6bf5
+     * givenMobileNumberShouldBeValidTestCase created to validate mobile number.
      */
     @Test
     public void givenMobileNumberShouldBeValidTestCase(){
@@ -74,17 +70,17 @@ public class UserRegistrationTestCases {
     }
 
     /*
-     * givenPasswordShouldBeValidTestCase created to validate email.
+     * givenPasswordShouldBeValidTestCase created to validate password
      */
     @Test
     public void givenPasswordShouldBeValidTestCase(){
-        boolean valid = userRegister.isValidPassword("abcABC123@$");
+        boolean valid = userRegister.isValidPassword("Abcdefg123");
         Assert.assertTrue("abcABC123@$",true);
     }
 
     @Test
     public void givenPasswordShouldBeInValidTestCase(){
-        boolean valid = userRegister.isValidPassword("abA1@");
+        boolean valid = userRegister.isValidPassword("abA123");
         Assert.assertFalse("abA1@",false);
     }
 }

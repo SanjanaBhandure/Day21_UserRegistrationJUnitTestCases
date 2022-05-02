@@ -34,9 +34,9 @@ public class UserRegister {
 
 
     /*
-     * isValidPassword method created that should have minimum 8 characters.
+     * isValidPassword method created that should have at least 1 Upper Case.
      */
     public static boolean isValidPassword(String password) {
-        return Pattern.matches("^[A-Z a-z 0-9]{8,}$", password);
+        return Pattern.matches("^[A-Z]{1}[A-Za-z 0-9]{8,}$", password);
     }
 }
