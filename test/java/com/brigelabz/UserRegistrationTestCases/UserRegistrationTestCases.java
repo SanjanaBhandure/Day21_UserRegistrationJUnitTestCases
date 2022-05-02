@@ -55,7 +55,7 @@ public class UserRegistrationTestCases {
     }
 
     /*
-     * givenEmailShouldBeValidTestCase created to validate email.
+     * givenPhoneNumberShouldBeValidTestCase created to validate email.
      */
     @Test
     public void givenMobileNumberShouldBeValidTestCase(){
