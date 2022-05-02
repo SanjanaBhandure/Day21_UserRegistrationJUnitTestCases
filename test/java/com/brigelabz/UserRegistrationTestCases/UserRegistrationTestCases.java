@@ -74,13 +74,13 @@ public class UserRegistrationTestCases {
      */
     @Test
     public void givenPasswordShouldBeValidTestCase(){
-        boolean valid = userRegister.isValidPassword("Abcdefg123");
+        boolean valid = userRegister.isValidPassword("Abcdefg#123");
         Assert.assertTrue("abcABC123@$",true);
     }
 
     @Test
     public void givenPasswordShouldBeInValidTestCase(){
-        boolean valid = userRegister.isValidPassword("abA123");
+        boolean valid = userRegister.isValidPassword("abA123#");
         Assert.assertFalse("abA1@",false);
     }
 }

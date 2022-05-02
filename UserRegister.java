@@ -34,9 +34,9 @@ public class UserRegister {
 
 
     /*
-     * isValidPassword method created that should have at least 1 numeric number in the password
+     * isValidPassword method created that should have exactly 1 special character
      */
     public static boolean isValidPassword(String password) {
-        return Pattern.matches("^(?=.*[0-9])\\\"+\\\"(?=.*[a-z])\\\"+\\\"(?=.*[A-Z])\\\"+\\\"(?=.*[@#$%^&+=]){8,}$", password);
+        return Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$" , password);
     }
 }
