@@ -1,5 +1,6 @@
 package com.brigelabz.UserRegistrationTestCases;
 import com.Bridgelabz.Day21_UserRegistrationProblem.UserRegister;
+import com.Bridgelabz.Day21_UserRegistrationProblem.UserRegistrationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +41,7 @@ public class EmailTest {
         }
 
         @Test
-        public void givenEmailIds_withExpectedResult_shouldPassAllTheTestCases() {
+        public void givenEmailIds_withExpectedResult_shouldPassAllTheTestCases() throws UserRegistrationException {
             UserRegister userRegister = new UserRegister();
             boolean result = userRegister.emailIdValidator(this.email);
             Assert.assertEquals(this.expectedResult, result);
