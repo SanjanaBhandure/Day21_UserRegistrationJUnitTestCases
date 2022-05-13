@@ -11,10 +11,9 @@ import org.junit.jupiter.api.Assertions;
 public class UserRegistrationTestCases {
         UserRegister userRegister = new UserRegister();
 
-    /*
-    * givenFirstNameShouldBeValidTestCase created to validate first name is true or false.
-    */
-
+/*
+    givenFirstNameShouldBeValidTestCase created to validate first name is true or false.
+*/
     @Test
     public void givenFirstNameShouldBeValidTestCase() {
         boolean firstName = false;
@@ -26,41 +25,41 @@ public class UserRegistrationTestCases {
         Assert.assertTrue(firstName);
     }
 
-    /*
-     * givenLastNameShouldBeValidTestCase created to validate last name is true or false.
-     */
+/*
+    givenLastNameShouldBeValidTestCase created to validate last name is true or false.
+*/
     @Test
     public void givenLastNameShouldBeValidTestCase() {
         boolean lastName = false;
         try {
-            lastName = UserRegister.isValidFirstName("Bhandure");
+            lastName = UserRegister.isValidLastName("Bhandure");
         } catch (UserRegistrationException exception) {
             exception.printStackTrace();
         }
         Assert.assertTrue(lastName);
     }
 
-     /*
-     * givenEmailShouldBeValidTestCase created to validate email.
-     */
+/*
+    givenEmailShouldBeValidTestCase created to validate email.
+*/
      @Test
      public void givenEmailShouldBeValidTestCase() throws UserRegistrationException {
          boolean email = userRegister.isValidEmail("abc@gmail.com");
          Assertions.assertTrue(email);
      }
 
-    /*
-     * givenMobileNumberShouldBeValidTestCase created to validate mobile number.
-     */
+/*
+     givenMobileNumberShouldBeValidTestCase created to validate mobile number.
+*/
     @Test
     public void givenMobileNumberShouldBeValidTestCase() throws UserRegistrationException {
         boolean phoneNumber = userRegister.isValidPhoneNumber("91 9900000000");
         Assertions.assertTrue(phoneNumber);
     }
 
-    /*
-     * givenPasswordShouldBeValidTestCase created to validate password
-     */
+/*
+    givenPasswordShouldBeValidTestCase created to validate password
+*/
     @Test
     public void givenPasswordShouldBeValidTestCase() throws UserRegistrationException {
         boolean password = userRegister.isValidPassword("abcdAadg");
